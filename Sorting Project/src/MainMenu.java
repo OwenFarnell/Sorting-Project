@@ -16,7 +16,7 @@ public class MainMenu
 				Scanner userStringInput = new Scanner(System.in);
 				Scanner userIntInput = new Scanner(System.in);
 
-				System.out.println("Choose a Sorting Method to use: \n(1) Bubble Sort \n(2) Mergesort \n(3) Insertion Sort \n(4) Quicksort \n(5) Selection Sort");
+				System.out.println("Choose a Sorting Method to use: \n(1) Bubble Sort \n(2) Mergesort \n(3) Insertion Sort \n(4) Quicksort \n(5) Selection Sort \n(6) all");
 				int menuChoice = userIntInput.nextInt();
 
 				if (menuChoice == 1)
@@ -25,41 +25,41 @@ public class MainMenu
 					}
 				if (menuChoice == 2)
 					{
-						merge();
+						MergeSort.main(null);
 					}
 				if (menuChoice == 3)
 					{
-						insertion();
+						InsertionSort.main(null);
 					}
 				if (menuChoice == 4)
 					{
-						quick();
+						QuickSort.main(null);
 					}
 				if (menuChoice == 5)
 					{
-						selection();
+						SelectionSort.main(null);
+					}
+				if(menuChoice == 6)
+					{
+						allTest();
 					}
 				else
 					{
 						start();
 					}
 			}
+
+
+		private static void allTest()
+			{
+				System.out.println("--------------------------------------------------");
+				BubbleSort.main(null);
+				MergeSort.main(null);
+				InsertionSort.main(null);
+				QuickSort.main(null);
+				SelectionSort.main(null);
+				System.out.println("--------------------------------------------------");
+				start();
+			}
 		
-		
-		public static void merge()
-			{
-				
-			}
-		public static void insertion()
-			{
-				
-			}
-		public static void quick()
-			{
-				
-			}
-		public static void selection()
-			{
-				
-			}
 	}

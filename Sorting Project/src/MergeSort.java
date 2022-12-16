@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class BubbleSort {  
+public class MergeSort {  
 	
 	public static long start = System.currentTimeMillis();
-    static void bubbleSort(int[] arr) {  
+    static void mergeSort(int[] arr) {  
         int n = arr.length;  
         int temp = 0;  
          for(int i=0; i < n; i++){  
@@ -21,7 +21,7 @@ public class BubbleSort {
                  }  
          }
          long end = System.currentTimeMillis();
-         float sec = (end - start) / 15000F; System.out.println("Bubble Sort took " + sec + " seconds");
+         float sec = (end - start) / 15000F; System.out.println("Merge Sort took " + sec + " seconds");
          
          
     }  
@@ -44,9 +44,9 @@ public class BubbleSort {
                    
                   
                   
-                bubbleSort(arr);  
+                mergeSort(arr);  
                  
-                
+                 
                 for(int i =0; i < ArrayLength; i++) {
             		int number = (int)(Math.random()*90)+10;
             		arr[i] = number;  
@@ -54,4 +54,5 @@ public class BubbleSort {
                 
         } 
     
-}  
+}
+
