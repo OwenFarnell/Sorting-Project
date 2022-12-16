@@ -59,7 +59,19 @@ public class MainMenu
 				QuickSort.main(null);
 				SelectionSort.main(null);
 				System.out.println("--------------------------------------------------");
-				start();
+				Scanner userStringInput = new Scanner(System.in);
+				Scanner userIntInput = new Scanner(System.in);
+
+				System.out.println("(1) Back to the menu or (2) run again?");
+				int menuChoice2 = userIntInput.nextInt();
+				if (menuChoice2 == 1)
+					{
+						start();
+					}
+				if (menuChoice2 == 2)
+					{
+						allTest();
+					}
 			}
 		
 	}
