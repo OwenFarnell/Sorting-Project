@@ -21,7 +21,7 @@ public class BubbleSort {
                  }  
          }
          long end = System.currentTimeMillis();
-         float sec = (end - start) / 15000F; System.out.println("Bubble Sort took " + sec + " seconds");
+         float sec = (end - start) / 1500F; System.out.println("- Bubble Sort took " + sec + " seconds");
          
          
     }  

@@ -18,7 +18,7 @@ public class InsertionSort {
             array[i+1] = key;  
         } 
         long end = System.currentTimeMillis();
-        float sec = (end - start) / 10000F; System.out.println("Insertion Sort took " + sec + " seconds");
+        float sec = (end - start) / 15000F; System.out.println("- Insertion Sort took " + sec + " seconds");
         
        
     }  
@@ -37,8 +37,7 @@ public class InsertionSort {
             		int number = (int)(Math.random()*90)+10;
             		arr[i] = number;  
             	}
-                   
-                System.out.println();  
+           
                   
                 insertionSort(arr);  
                  

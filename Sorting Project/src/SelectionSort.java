@@ -16,7 +16,7 @@ public class SelectionSort {
             arr[i] = smallerNumber;  
         }
         long end = System.currentTimeMillis();
-        float sec = (end - start) / 10000F; System.out.println("Selection Sort took " + sec + " seconds");
+        float sec = (end - start) / 10000F; System.out.println("- Selection Sort took " + sec + " seconds");
         
       
     }

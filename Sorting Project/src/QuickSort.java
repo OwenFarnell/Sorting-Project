@@ -1,33 +1,36 @@
 import java.util.Scanner;
-import java.util.Scanner;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.Random;
 
 public class QuickSort {  
-	
 	public static long start = System.currentTimeMillis();
-    static void quickSort(int[] arr) {  
-        int n = arr.length;  
-        int temp = 0;  
-         for(int i=0; i < n; i++){  
-                 for(int j=1; j < (n-i); j++){  
-                          if(arr[j-1] > arr[j]){    
-                                 temp = arr[j-1];  
-                                 arr[j-1] = arr[j];  
-                                 arr[j] = temp;  
-                         }  
-                          
-                 }  
-         }
-         long end = System.currentTimeMillis();
-         float sec = (end - start) / 15000F; System.out.println("Quick Sort took " + sec + " seconds");
-         
-         
-    }  
-    public static void main(String[] args) {  
-    	
-    	    
+    public static void selectionSort(int[] arr)
+    	{  
+        
+    		for (int i = 0; i < arr.length - 1; i++)  
+        {  
+            int index = i;  
+            for (int j = i + 1; j < arr.length; j++)
+            	{  
+                if (arr[j] < arr[index])
+                	{
+                	
+                    index = j;
+                    
+                }  
+            }  
+            int smallerNumber = arr[index];   
+          arr[index] = arr[i];
+            
+            arr[i] = smallerNumber;  
+            
+        }
+        long end = System.currentTimeMillis();
+        float sec = (end - start) / 50000F; System.out.println("- Quick Sort took " + sec + " seconds");
+        
+      
+    }
+    
+       
+    public static void main(String a[]){  
     	Scanner userStringInput = new Scanner(System.in);
     	Scanner userInput = new Scanner(System.in);
 
@@ -44,14 +47,12 @@ public class QuickSort {
                    
                   
                   
-                quickSort(arr);  
+                selectionSort(arr);  
                  
-                
+                  
                 for(int i =0; i < ArrayLength; i++) {
             		int number = (int)(Math.random()*90)+10;
             		arr[i] = number;  
-            	}     
-                
-        } 
-    
-}
+            	}  
+    }  
+}   
