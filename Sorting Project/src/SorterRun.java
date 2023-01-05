@@ -109,12 +109,6 @@ public class SorterRun
 				double timeQ = (endTimeQ - startTimeQ) / runs;
 				double timeS = (endTimeS - startTimeS) / runs;
 				
-				//numbers.add(new SortingRun("Bubble sort       ", timeB, " milliseconds"));
-				//numbers.add(new SortingRun("Insertion sort    ", timeI, " milliseconds"));
-				//numbers.add(new SortingRun("Merge sort        ", timeM, " milliseconds"));
-				//numbers.add(new SortingRun("Quick sort        ", timeQ, " milliseconds"));
-				//numbers.add(new SortingRun("Selection sort    ", timeS, " milliseconds"));
-				
 				numbers.add(new SortingRun("Bubble sort ", timeB, " milliseconds"));
 				numbers.add(new SortingRun("Insertion sort ", timeI, " milliseconds"));
 				numbers.add(new SortingRun("Merge sort ", timeM, " milliseconds"));
@@ -122,11 +116,10 @@ public class SorterRun
 				numbers.add(new SortingRun("Selection sort ", timeS, " milliseconds"));
 				
 				Collections.sort(numbers, new timeSorter());
-				int place = 1;
 				for(SortingRun t:numbers)
 					{
-						System.out.printf(place + "." + t.getTypeSort() + t.getTime() + t.getSeconds());
-						place++;
+						System.out.printf( "- " + t.getTypeSort() + t.getTime() + t.getSeconds());
+						System.out.println("\n");
 					}
 
 
