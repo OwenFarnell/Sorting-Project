@@ -1,50 +1,22 @@
-import java.util.Scanner;
+public class SelectionSort
+	{
 
-public class SelectionSort {  
-	public static long start = System.currentTimeMillis();
-    public static void selectionSort(int[] arr){  
-        for (int i = 0; i < arr.length - 1; i++)  
-        {  
-            int index = i;  
-            for (int j = i + 1; j < arr.length; j++){  
-                if (arr[j] < arr[index]){  
-                    index = j;
-                }  
-            }  
-            int smallerNumber = arr[index];   
-            arr[index] = arr[i];  
-            arr[i] = smallerNumber;  
-        }
-        long end = System.currentTimeMillis();
-        float sec = (end - start) / 10000F; System.out.println("- Selection Sort took " + sec + " seconds");
-        
-      
-    }
-    
-       
-    public static void main(String a[]){  
-    	Scanner userStringInput = new Scanner(System.in);
-    	Scanner userInput = new Scanner(System.in);
+		public static void selectionSort(int[] elements)
+					{
+					 for (int j = 0; j < elements.length - 1; j++)
+					 		{
+					 int minIndex = j;
+					 for (int k = j + 1; k < elements.length; k++)
+					 			{
+					 if (elements[k] < elements[minIndex])
+					 {
+					 				minIndex = k;
+					 				}
+					 }
+					 		int temp = elements[j];
+					 		elements[j] = elements[minIndex];
+					 		elements[minIndex] = temp;
+					 		}
+					}
 
-    	System.out.println("How many #'s?");
-    	
-    	int ArrayLength = userInput.nextInt();
-    	int arr []= new int [ArrayLength];
-    	
-                
-                for(int i =0; i < ArrayLength; i++) {
-            		int number = (int)(Math.random()*90)+10;
-            		arr[i] = number;  
-            	}
-                   
-                  
-                  
-                selectionSort(arr);  
-                 
-                  
-                for(int i =0; i < ArrayLength; i++) {
-            		int number = (int)(Math.random()*90)+10;
-            		arr[i] = number;  
-            	}  
-    }  
-}  
+	}
